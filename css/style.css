@@ -5,6 +5,7 @@
 /* Box Model Hack */
 *{
   box-sizing: border-box;
+  /* border: solid black 1px; */
 }
 
 /******************************************
@@ -46,38 +47,45 @@ h2{
 .container{
   display: flex;
   justify-content: center;
+
 }
 
 .cont-1, .cont-2{
   display: flex;
-  /* margin: 0 100px; */
-  justify-content: center;
-  width: 50%;
+  flex: 1;
 }
 
-.cont-1 div, .cont-2 div {
-  margin: 0 20px;
+.key{
+  flex: 2;
+  text-align: center;
+}
+
+.value{
+  flex: 1;
 }
 
 .change{
   font-weight: bold;
 }
 
-div{
-  /* border: solid black 1px; */
-  margin: 0 20px;
-
-}
-
 .bold{
   font-weight: bold;
 }
 
-/* @media screen and (min-width: 1200px) {
+@media screen and (max-width: 800px) {
   .container {
     display: block;
+    text-align: center;
   }
-} */
+  .key{
+    flex: 1;
+    text-align: center;
+  }
+  
+  .value{
+    flex: 1;
+  }
+}
 
 /******************************************
 /* ADDITIONAL STYLES

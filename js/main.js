@@ -24,7 +24,7 @@ function stockDetails() {
             value[11].innerText = data.ForwardPE;
             value[12].innerText = data.DividendYield;
 
-            let heading = document.querySelectorAll("h2, h3, div.fundam, div.price-para");
+            let heading = document.querySelectorAll("h2, h3, .key");
             for (let i = 0; i < heading.length; i++) {
                 console.log(heading[i]);
                 heading[i].classList.add("show");
@@ -40,7 +40,7 @@ function stockDetails() {
         .then((data) => {
             console.log(data);
 
-            let value = document.querySelectorAll(".price-value p");
+            let value = document.querySelectorAll(".cont-2 .value p");
             console.log(value);
             value[0].innerText = data["Global Quote"]["05. price"];
             value[1].innerText = data["Global Quote"]["08. previous close"];
